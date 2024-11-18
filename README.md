@@ -1,7 +1,7 @@
 # Joy Kid 
 
 This project started as an exercise of passing and receiving parameters using CALL function, but evolved to a hardware prototype using a microcontroller that sends data through the MSX joystick port in order to emulate the 
-[Sensor Kid](https://www.msx.org/wiki/Micomsoft_Sensor_Kid/) 
+[Sensor Kid](https://www.msx.org/wiki/Micomsoft_Sensor_Kid) 
 
 ## Protocol
 
