@@ -38,6 +38,40 @@
 ;  17 drop pin 8, rise pins 6 and 7
 
 
+; APPENDIX: 
+;
+; MICROCONTROLLER MAIN LOOP
+;
+; Wait for ATT (pin 8 low)
+; restart variables
+; read ADC channels
+; drop ack line
+; wait for pin7 low (SOF). If pin 8 high, restart 
+; release ack line
+;
+; write first lower nibble
+; wait for pin 7 high. If pin 8 high, restart 
+; write first high nibble
+; 
+; wait for pin 7 low. If pin 8 high, restart 
+; read PORT 0 value
+; write second lower nibble
+; wait for pin 7 high. If pin 8 high, restart 
+; write second high nibble
+; 
+; wait for pin 7 low. If pin 8 high, restart 
+; read PORT 1 value
+; write third lower nibble
+; wait for pin 7 high. If pin 8 high, restart 
+; write third  high nibble
+; 
+; wait for pin 8 high
+; release all pins
+; update PORT 0/1 output pins 
+; do it all again
+
+
+
 psgaddr: equ 0a0h
 psgwr  : equ 0a1h
 psgrd  : equ 0a2h
